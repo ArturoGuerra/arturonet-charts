@@ -8,7 +8,7 @@ website:
   image:
     repository: arturoguerra/arturonet
     pullPolicy: IfNotPresent
-    tag: e121185a719273fb3fe4bc841a7fc0994ede5350
+    tag: c75fa4abde0bbe680c915058b684ebd647c0422d
 tls:
   enabled: true
 ingress:
