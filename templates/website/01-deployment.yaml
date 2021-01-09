@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.website.name }}
+  labels:
+    app: {{ .Values.website.name }}
+spec:
+  replicas: {{ .Values.website.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.website.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.website.name }}
+    spec:
+      containers:
+        - name: {{ .Values.website.name }}
+          image: "{{ .Values.website.image.repository }}:{{ .Values.website.image.tag }}"
+          imagePullPolicy: {{ .Values.website.image.pullPolicy }}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PORT
+              value: "8080"
+            - name: HOST
+              value: "0.0.0.0"
