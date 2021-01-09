@@ -2,18 +2,15 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-
 website:
   name: website
   replicas: 2
   image:
     repository: arturoguerra/arturonet
     pullPolicy: IfNotPresent
-    tag: latest
-
+    tag: e121185a719273fb3fe4bc841a7fc0994ede5350
 tls:
   enabled: true
-
 ingress:
   name: arturonet
   host: arturonet.com
