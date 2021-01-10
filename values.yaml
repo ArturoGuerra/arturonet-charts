@@ -4,10 +4,17 @@
 
 
 website:
-  name: website
+  name: arturonet-website
   replicas: 2
   image:
     repository: arturoguerra/arturonet
+    pullPolicy: IfNotPresent
+    tag: latest
+website:
+  name: arturonet-api
+  replicas: 2
+  image:
+    repository: arturoguerra/arturonet-api
     pullPolicy: IfNotPresent
     tag: latest
 
@@ -18,6 +25,9 @@ ingress:
   name: arturonet
   host: arturonet.com
   paths:
-    - path: "/"
-      service: website
+    - path: "/api/"
       port: 80
+      service: arturonet-api
+    - path: "/"
+      port: 80
+      service: arturonet-website
