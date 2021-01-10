@@ -10,13 +10,17 @@ website:
     repository: arturoguerra/arturonet
     pullPolicy: IfNotPresent
     tag: latest
-website:
+  config:
+    BASE_URL: "http://arturonet-api/api"
+    BROWSER_BASE_URL: "https://arturonet.com/api"
+api:
   name: arturonet-api
   replicas: 2
   image:
     repository: arturoguerra/arturonet-api
     pullPolicy: IfNotPresent
     tag: latest
+  config: {}
 
 tls:
   enabled: true

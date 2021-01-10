@@ -25,3 +25,6 @@ spec:
               value: "8080"
             - name: HOST
               value: "0.0.0.0"
+          envFrom:
+            - configMapRef:
+                name: {{ .Values.website.name }}-config
