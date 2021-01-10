@@ -2,7 +2,6 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-
 website:
   name: arturonet-website
   replicas: 2
@@ -24,7 +23,6 @@ api:
 
 tls:
   enabled: true
-
 ingress:
   name: arturonet
   host: arturonet.com
