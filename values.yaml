@@ -18,7 +18,7 @@ api:
   image:
     repository: arturoguerra/arturonet-api
     pullPolicy: IfNotPresent
-    tag: 0980b52de8711d789eb912bccab14f81bbd66cc6
+    tag: 6819ccd6d69fe7360e90e474dade31622eb2caae
   config: {}
 tls:
   enabled: true
