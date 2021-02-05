@@ -8,7 +8,7 @@ website:
   image:
     repository: arturoguerra/arturonet
     pullPolicy: IfNotPresent
-    tag: a6f09abd27dc36e1357cd16cdb3c9fc0d4df3cd5
+    tag: a5b07fc4a842f96ec21afd7e07e5a2cab6deb8ba
   config:
     BASE_URL: "http://arturonet-api/api"
     BROWSER_BASE_URL: "https://arturonet.com/api"
